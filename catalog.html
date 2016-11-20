@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tree.js"></script>
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+        .wrap-menu{ width: 60%;}
+        .wrap-menu ul li h2{ cursor:pointer; height:100%; width:100%; margin:0 0 1px 0; font:16px/31px '微软雅黑'; color:#fff; background:#fbb450;}
+    </style>
+</head>
+<body>
+<div class="wrap-menu">
+
+</div>
+<script>
+    var testMenu=[
+        {
+            "name": "第一单元",
+            "submenu": [
+                {
+                    "name": "1.1 item1",
+                    "url": ""
+                },
+                {
+                    "name": "1.2 item2",
+                    "url": ""
+                },
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                },
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                },
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                },
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                },
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                },
+                {
+                    "name": "二级菜单",
+                    "submenu": [
+                        {
+                            "name": "三级菜单",
+                            "url": ""
+                        },
+                        {
+                            "name": "三级菜单",
+                            "url": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "一级菜单",
+            "submenu": [
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                },
+                {
+                    "name": "二级菜单",
+                    "submenu": [
+                        {
+                            "name": "三级菜单",
+                            "url": ""
+                        },
+                        {
+                            "name": "三级菜单",
+                            "url": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                },
+                {
+                    "name": "二级菜单",
+                    "submenu": [
+                        {
+                            "name": "三级菜单",
+                            "url": ""
+                        },
+                        {
+                            "name": "三级菜单",
+                            "url": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                }
+            ]
+        },
+        {
+            "name": "一级菜单",
+            "submenu": [
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                },
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                },
+                {
+                    "name": "二级菜单",
+                    "url": ""
+                }
+            ]
+        }
+    ];
+    $(function(){
+        new AccordionMenu({menuArrs:testMenu});
+    });
+</script>
+</body>
+</html>

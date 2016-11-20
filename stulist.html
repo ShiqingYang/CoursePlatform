@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生列表</title>
+    <script>
+        var fontSize = 100;
+        var elm = document.documentElement;
+        elm.style.fontSize = fontSize * (elm.clientWidth/320) + 'px';
+    </script>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+<header id="header">
+    <span class="right"></span>
+</header>
+<div class="menu">
+    <li><a href="">首页</a></li>
+    <li><a href="#">List 1</a></li>
+    <li><a href="#">List 2</a></li>
+    <li><a href="#">List 3</a></li>
+    <li><a href="#">List 4</a></li>
+    <li><a href="#">List 5</a></li>
+</div>
+<div class="nav">学生列表</div>
+<div class="container">
+    <div class="row">
+        <div class="stu">
+            <div class="stu_img"><img src="img/course1.jpg" alt="stu1" width="200" /></div>
+            <div class="stu_info"><span>张三</span><div class="barborder"><div class="bar" style="width: 50px;"></div></div></div>
+            <div class="stu_score"></div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    window.onload = function()
+    {
+        $(".bar").style.width ="100px";
+    }
+</script>
+</body>
+</html>
