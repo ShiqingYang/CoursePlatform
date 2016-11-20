@@ -3,7 +3,7 @@
   height: 30px;
 }
 .br-wrapper-f .br-widget a {
-  background-image: url("../images/star.png");
+  background-image: url("../img/star.png");
   width: 30px;
   height: 30px;
   display: block;
@@ -11,7 +11,7 @@
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .br-wrapper-f .br-widget a {
-    background-image: url("../images/star@2x.png");
+    background-image: url("../img/star@2x.png");
     background-size: 30px 60px;
   }
 }
@@ -37,8 +37,8 @@
 .br-wrapper-f {
   width: 152px;
   position: absolute;
-  margin: 0px 0 0 -76px;
-  left: 50%;
+  margin: 0 0 0 -76px;
+  left: 40%;
 }
 /******* BOX *******/
 .box {
@@ -84,11 +84,8 @@
   border-top: 0;
 }
 .box-blue .box-header {
-  background-color: #4278f5;
   color: white;
 }
 .box-blue .box-body {
   background-color: white;
-  border: 2px solid #8bacf9;
-  border-top: 0;
 }

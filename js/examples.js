@@ -1,7 +1,7 @@
 $(function() {
     function ratingEnable() {
 
-        $('#example-f').barrating({
+        $('.examplestar').barrating({
             wrapperClass: 'br-wrapper-f',
             showSelectedRating: false
         });
