@@ -180,10 +180,10 @@ img {
 }
 
 .catalogright {
-    padding:30px;
-    width:52%;
+    padding: 30px;
+    width: 52%;
     height: 550px;
-    float:right;
+    float: right;
     background: #abcdef;
 }
 
@@ -246,43 +246,63 @@ img {
 }
 
 /*================================stulist===========================================*/
-.nav{
-    font-size:25px;
+.nav {
+    font-size: 25px;
     width: 100%;
     height: 40px;
-    line-height:40px;
-    text-align:center;
+    line-height: 40px;
+    text-align: center;
     background: #eee;
     margin: 10px 0 20px;
 }
-.stu{
-    font-size:15px;
-    width:20%;
+
+.stu {
+    font-size: 15px;
+    width: 25%;
     float: left;
-    border: solid 1px #aabbcc;
 }
-.stu_img{
-    margin: 10px 5px;
+
+.stu_img {
+    margin: 10px 10px;
 }
-.stu_img img{
+
+.stu_img img {
     width: 100%;
 }
-.stu_info{
+
+.stu_info {
     width: 200px;
 }
-.stu_info span{
+
+.stu_info span {
     float: left;
     display: inline;
-    margin: 2px 5px;
+    margin: 2px 10px;
 }
-.barborder{
+
+.barborder {
     float: left;
-    width: 100px;
+    width: 120px;
     border: 1px solid #2BB7E4;
     height: 20px;
 }
 
-.bar{
+.bar {
     height: 20px;
     background: #2BB7E4;
 }
+
+/*================================coursecontent===========================================*/
+.ui-stepBar-wrap{position:relative;width:90%;height:130px;background:#ebeef3;overflow:hidden;display:none;z-index:100; font-size: 20px;}
+.ui-stepBar-wrap .ui-stepBar{position:relative;width:90%;height:5px;background:#cccccc;top:50px;left:5%;z-index:101;}
+.ui-stepBar-wrap .ui-stepBar .ui-stepProcess{position:relative;width:0;height:5px;background:#516784;top:0;left:0;z-index:102;}
+.ui-stepBar-wrap .ui-stepInfo-wrap{width:90%;margin:0 auto;height:100%;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo{position:relative;float:left;padding-top:36px;text-align:center;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepSequence{position:relative;padding:4px 8px;border-radius:50%;z-index:103;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepName{position:relative;line-height:50px;z-index:103;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-pre-change,
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-hind-change{cursor:pointer;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-pre-change:hover{box-shadow:0 0 3px 1px #516784;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-hind-change:hover{box-shadow:0 0 3px 1px #cccccc;}
+.judge-stepSequence-pre{background:#516784;color:#ffffff;}
+.judge-stepSequence-hind{background:#cccccc;color:#000000;}
