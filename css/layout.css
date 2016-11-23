@@ -4,16 +4,19 @@
     padding: 0;
     list-style: none;
 }
-body{
-	width:100%;
-	overflow:hidden;
+
+body {
+    width: 100%;
+    overflow: hidden;
 }
+
 img {
     display: block;
 }
 
 #header {
-    background-color: #00a1e9;
+    width: 100%;
+    background-color: #323436;
     text-align: center;
     height: 0.2rem;
     line-height: 0.2rem;
@@ -74,7 +77,7 @@ img {
 
 .menu {
     overflow: hidden;
-    background-color: #00a1e9;
+    background-color: #323436;
     width: 25%;
     position: absolute;
     right: 0;
@@ -91,10 +94,13 @@ img {
 .menu li {
     width: 100%;
     text-align: center;
-    border-bottom: 0.01rem solid #0097da;
+    border-bottom: 0.01rem solid #999a9b;
     font-size: 0.05rem;
     height: 0.15rem;
     line-height: 0.15rem;
+}
+.menu li:last-child {
+    border-bottom: 0;
 }
 
 .menu li a {
@@ -120,63 +126,84 @@ img {
     float: left;
     margin-left: 2.5%;
     margin-top: 50px;
+    position: relative;
 }
 
+.coursename{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #8bb721;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+}
 /*================================coursestep===========================================*/
 .steps {
     width: 85%;
     padding: 40px 80px;
-    font-size: 20px;
+    font-size: 16px;
+    color:#0d1b24;
 }
 
 .stepleft {
     width: 32%;
-    height: 120px;
+    height: 110px;
     float: left;
-    background: #abc;
+    background: #42ccb2;
     font-size: 30px;
     text-align: center;
-    line-height: 120px;
+    line-height: 110px;
+    color:#0d1b24;
 }
 
 .stepright {
     width: 60%;
-    height: 80px;
+    height: 70px;
     float: right;
-    background: #ccc;
+    background: #42ccb2;
     padding: 20px;
+    line-height: 25px;
 }
 
 .stepleft2 {
     width: 32%;
-    height: 120px;
+    height: 110px;
     float: right;
-    background: #abc;
-    margin: 30px 0;
+    background: #f0f0f0;
+    margin: 20px 0;
     font-size: 30px;
     text-align: center;
-    line-height: 120px;
+    line-height: 110px;
 }
 
 .stepright2 {
     width: 60%;
-    height: 80px;
+    height: 70px;
     float: left;
-    background: #ccc;
-    margin: 30px 0;
+    background: #f0f0f0;
+    margin: 20px 0;
     padding: 20px;
+    line-height: 25px;
 }
 
 /*================================kownledgecatalog===========================================*/
 .catalog {
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .catalogleft {
     width: 30%;
-    height: 550px;
-    background: #eee;
+    height: auto;
+    min-height: 450px;
+    background: #f1f1f1;
     border: solid 1px #fff;
     float: left;
     padding: 30px;
@@ -185,16 +212,16 @@ img {
 .catalogright {
     padding: 30px;
     width: 52%;
-    height: 550px;
+    height: auto;
     float: right;
-    background: #abcdef;
+    background: #f1f1f1;
 }
 
 .wrap-menu {
     overflow: auto;
     width: 100%;
     background: #F6F6F6;
-    font: 12px/1.5 Tahoma, Arial, sans-serif
+    font-size: 12px;
 }
 
 .wrap-menu ul {
@@ -215,7 +242,7 @@ img {
     margin: 0 0 1px 0;
     font: 16px/31px '微软雅黑';
     color: #fff;
-    background: #51a351;
+    background: #f4ac34;
 }
 
 .wrap-menu ul li a {
@@ -274,11 +301,35 @@ img {
 .stu_img .stupic {
     width: 100%;
 }
-.editscore{
-    width:100%; height:50px; line-height: 50px; overflow:hidden; position:absolute; left:0; bottom:0; font-size:12px; color:#fff;cursor: pointer;
-    background: rgba(0,0,0,0.5);
+.good{
+    margin:35px 0 0 20px;
+    float: left;
+    width: 70px;
+    height: 70px;
+}
+.bad{
+    margin:35px 20px 0 0;
+    float: right;
+    width: 70px;
+    height: 70px;
+}
+
+.editscore {
+    width: 100%;
+    height: 150px;
+    display: none;
+    line-height: 40px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 10000;
 }
+
 .stu_info {
     width: 200px;
 }
@@ -302,48 +353,119 @@ img {
 }
 
 /*================================coursecontent===========================================*/
-.ui-stepBar-wrap{position:relative;width:92%; margin:0 auto; height:130px;background:#ebeef3;overflow:hidden;display:none;z-index:100; font-size: 20px;}
-.ui-stepBar-wrap .ui-stepBar{position:relative;width:90%;height:5px;background:#cccccc;top:50px;left:5%;z-index:101;}
-.ui-stepBar-wrap .ui-stepBar .ui-stepProcess{position:relative;width:0;height:5px;background:#516784;top:0;left:0;z-index:102;}
-.ui-stepBar-wrap .ui-stepInfo-wrap{width:90%;margin:0 auto;height:100%;}
-.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo{position:relative;float:left;padding-top:36px;text-align:center;}
-.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepSequence{position:relative;padding:4px 10px;border-radius:50%;z-index:103;}
-.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepName{position:relative;line-height:50px;z-index:103;}
-.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-pre-change,
-.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-hind-change{cursor:pointer;}
-.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-pre-change:hover{box-shadow:0 0 3px 1px #516784;}
-.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-hind-change:hover{box-shadow:0 0 3px 1px #cccccc;}
-.judge-stepSequence-pre{background:#516784;color:#ffffff;}
-.judge-stepSequence-hind{background:#cccccc;color:#000000;}
-
-.coursecontent{
-
-}
-
-.content{
-	height:200px;
-	background:#aabbcc;
-	margin:30px 50px;
-	font-size:20px;
-}
-.linksimg{
-	width:25%;
-	float:left;
-}
-
-.links{
-    border-top:solid 1px #aabbcc;
+.ui-stepBar-wrap {
+    position: relative;
+    width: 92%;
     margin: 0 auto;
-    padding-top:30px;
-	font-size:20px;
+    height: 130px;
+    overflow: hidden;
+    display: none;
+    z-index: 100;
+    font-size: 16px;
 }
-.linksleft{
-	width:28%;
-	float:left;
-	margin-left:7.5%;
-	background:#abcdef;
+
+.ui-stepBar-wrap .ui-stepBar {
+    position: relative;
+    width: 90%;
+    height: 5px;
+    background: #cccccc;
+    top: 50px;
+    left: 5%;
+    z-index: 101;
 }
-.linksleft ul li{
-	height:30px;
-	line-height:30px;
+
+.ui-stepBar-wrap .ui-stepBar .ui-stepProcess {
+    position: relative;
+    width: 0;
+    height: 5px;
+    background: #8bb721;
+    top: 0;
+    left: 0;
+    z-index: 102;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo {
+    position: relative;
+    float: left;
+    padding-top: 36px;
+    text-align: center;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepSequence {
+    position: relative;
+    padding: 4px 10px;
+    border-radius: 50%;
+    z-index: 103;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepName {
+    position: relative;
+    line-height: 50px;
+    z-index: 103;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-pre-change,
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-hind-change {
+    cursor: pointer;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-pre-change:hover {
+    box-shadow: 0 0 3px 1px #8bb721;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-hind-change:hover {
+    box-shadow: 0 0 3px 1px #cccccc;
+}
+
+.judge-stepSequence-pre {
+    background: #8bb721;
+    color: #ffffff;
+}
+
+.judge-stepSequence-hind {
+    background: #cccccc;
+    color: #000000;
+}
+
+.content {
+    height: 150px;
+    margin: 30px 50px;
+    font-size: 16px;
+    text-indent: 2em;
+    line-height: 30px;
+}
+
+
+.links {
+    width: 100%;
+    height: 200px;
+    border-top: solid 1px #aabbcc;
+    margin: 0 auto;
+    padding-top: 30px;
+    font-size: 16px;
+    line-height: 50px;
+    background: #0d1e28;
+    color: #fff;
+}
+.linksimg {
+    width: 25%;
+    float: left;
+    margin-left: 8%;
+}
+
+.linksleft {
+    width: 21%;
+    float: left;
+    margin-left: 7.5%;
+}
+
+.linksleft ul li {
+    height: 30px;
+    line-height: 30px;
 }

@@ -5,18 +5,40 @@
     <title>Title</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/tree.js"></script>
+    <script src="js/radialIndicator.js"></script>
     <link rel="stylesheet" href="css/layout.css">
     <style>
-        .wrap-menu{ width: 60%;}
-        .wrap-menu ul li h2{ cursor:pointer; height:100%; width:100%; margin:0 0 1px 0; font:16px/31px '微软雅黑'; color:#fff; background:#fbb450;}
+        .wrap-menu {
+            width: 60%;
+            float: left;
+            background: #f2ffff;
+        }
+
+        .wrap-menu ul li h2 {
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            margin: 0 0 1px 0;
+            font: 16px/31px '微软雅黑';
+            color: #fff;
+            background: #39c28c;
+        }
+
+        .progressbar {
+            margin-left: 50px;
+            float: left;
+        }
     </style>
 </head>
 <body>
 <div class="wrap-menu">
 
 </div>
+<div class="progressbar">
+
+</div>
 <script>
-    var testMenu=[
+    var testMenu = [
         {
             "name": "第一单元",
             "submenu": [
@@ -124,9 +146,20 @@
             ]
         }
     ];
-    $(function(){
-        new AccordionMenu({menuArrs:testMenu});
+    $(function () {
+        new AccordionMenu({menuArrs: testMenu});
     });
+</script>
+<script>
+    $('.progressbar').radialIndicator({
+        barColor: '#54a6e0',
+        barWidth: 10,
+        initValue: 0,
+        roundCorner : true,
+        percentage: true
+    });
+    var radialObj = $('.progressbar').data('radialIndicator');
+    radialObj.animate(60);
 </script>
 </body>
 </html>

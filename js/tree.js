@@ -116,11 +116,14 @@ AccordionMenu.prototype = {
 			if($(this).siblings('ul').length > 0) {
 				$(this).siblings('ul').slideToggle('slow').end().children('img').toggleClass('unfold');
 			}
-
+			/*
+			控制只有一个li可以打开
+			 */
+			/*
 			$(this).parent('li').siblings().find('ul').hide()
 				.end().find('img.unfold').removeClass('unfold');
 			_config.clickItemCallBack && $.isFunction(_config.clickItemCallBack) && _config.clickItemCallBack($(this));
-
+			 */
 		});
 	}
 };
